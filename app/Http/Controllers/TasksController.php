@@ -55,6 +55,6 @@ class TasksController extends Controller
     		$task->description = $request->description;
 	    	$task->save();
 	    	return redirect('/dashboard'); 
-    	}    	
+    	}    	    
     }
 }

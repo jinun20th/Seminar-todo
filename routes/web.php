@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+Route::middleware(['auth', 'verified'])->group(function(){
     Route::get('/dashboard',[TasksController::class, 'index'])->name('dashboard');
 
     Route::get('/task',[TasksController::class, 'add']);
